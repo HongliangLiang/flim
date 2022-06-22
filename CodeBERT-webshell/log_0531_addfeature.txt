@@ -1,0 +1,264 @@
+nohup: ignoring input
+Epoch:   0%|          | 0/3 [00:00<?, ?it/s]human_feature : tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0],
+        ...,
+        [0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]])
+data_dir /data/hdj/tracking_buggy_files/joblib_memmap_swt/data/
+dev_file train_3hard_1_valid_data.txt
+prefix /data/hdj/tracking_buggy_files/swt/swt
+human_feature : tensor([[0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0],
+        ...,
+        [0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0],
+        [0, 0, 0,  ..., 0, 0, 0]])
+使用TextCNNClassifier模型
+Focal_loss alpha = [0.25, 0.75], 将对每一类权重进行精细化赋值
+training!!!
+[ 1 : 0 / 22580.875 ] loss :1.4706  , accuracy:  0.6875 true nums: 4  ration : 0.25 acc : 0.6875  f1 : 0.0
+[ 1 : 100 / 22580.875 ] loss :0.4871  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 200 / 22580.875 ] loss :0.4306  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 300 / 22580.875 ] loss :0.5758  , accuracy:  0.8125 true nums: 2  ration : 0.125 acc : 0.8125  f1 : 0.0
+[ 1 : 400 / 22580.875 ] loss :0.5345  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 500 / 22580.875 ] loss :0.4246  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 600 / 22580.875 ] loss :0.4379  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 700 / 22580.875 ] loss :0.8063  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 800 / 22580.875 ] loss :0.6428  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 900 / 22580.875 ] loss :0.7861  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 1000 / 22580.875 ] loss :0.8047  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 1100 / 22580.875 ] loss :0.5842  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 1200 / 22580.875 ] loss :0.7036  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 1300 / 22580.875 ] loss :0.5724  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 1400 / 22580.875 ] loss :0.5122  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 1500 / 22580.875 ] loss :0.5270  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 1600 / 22580.875 ] loss :0.7300  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 1700 / 22580.875 ] loss :0.4974  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 1800 / 22580.875 ] loss :0.5341  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 1900 / 22580.875 ] loss :0.6809  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 2000 / 22580.875 ] loss :0.5113  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 2100 / 22580.875 ] loss :0.5803  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.4
+[ 1 : 2200 / 22580.875 ] loss :0.4103  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 2300 / 22580.875 ] loss :0.7444  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 2400 / 22580.875 ] loss :0.7863  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 2500 / 22580.875 ] loss :0.5535  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 2600 / 22580.875 ] loss :0.5311  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 2700 / 22580.875 ] loss :0.6539  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 2800 / 22580.875 ] loss :0.6147  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 2900 / 22580.875 ] loss :0.5605  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 3000 / 22580.875 ] loss :0.5590  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 3100 / 22580.875 ] loss :0.6115  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 3200 / 22580.875 ] loss :0.4852  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 3300 / 22580.875 ] loss :0.5445  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 3400 / 22580.875 ] loss :0.5640  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 3500 / 22580.875 ] loss :0.5969  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 3600 / 22580.875 ] loss :0.5340  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 3700 / 22580.875 ] loss :0.5131  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 3800 / 22580.875 ] loss :0.5343  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 3900 / 22580.875 ] loss :0.4819  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 4000 / 22580.875 ] loss :0.5736  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 4100 / 22580.875 ] loss :0.4424  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 4200 / 22580.875 ] loss :0.5158  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 4300 / 22580.875 ] loss :0.4337  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 4400 / 22580.875 ] loss :0.4466  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 4500 / 22580.875 ] loss :0.6688  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 4600 / 22580.875 ] loss :0.5167  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 4700 / 22580.875 ] loss :0.3772  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 4800 / 22580.875 ] loss :0.8920  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 4900 / 22580.875 ] loss :0.5886  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 5000 / 22580.875 ] loss :0.6046  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 5100 / 22580.875 ] loss :0.6822  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 5200 / 22580.875 ] loss :0.5592  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 5300 / 22580.875 ] loss :0.6502  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 5400 / 22580.875 ] loss :0.5790  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 5500 / 22580.875 ] loss :0.5684  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 5600 / 22580.875 ] loss :0.3617  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 5700 / 22580.875 ] loss :0.4940  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 5800 / 22580.875 ] loss :0.5486  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 5900 / 22580.875 ] loss :0.6617  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 6000 / 22580.875 ] loss :0.7258  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 6100 / 22580.875 ] loss :0.6039  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 6200 / 22580.875 ] loss :0.3919  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 6300 / 22580.875 ] loss :0.5550  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 6400 / 22580.875 ] loss :0.6082  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 6500 / 22580.875 ] loss :0.7387  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 6600 / 22580.875 ] loss :0.6391  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 6700 / 22580.875 ] loss :0.5412  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 6800 / 22580.875 ] loss :0.5735  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 6900 / 22580.875 ] loss :0.5591  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 7000 / 22580.875 ] loss :0.4902  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 7100 / 22580.875 ] loss :0.7692  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 7200 / 22580.875 ] loss :0.7314  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 7300 / 22580.875 ] loss :0.6677  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 7400 / 22580.875 ] loss :0.4629  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 7500 / 22580.875 ] loss :0.5075  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 7600 / 22580.875 ] loss :0.5079  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 7700 / 22580.875 ] loss :0.5203  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 7800 / 22580.875 ] loss :0.5067  , accuracy:  0.9375 true nums: 2  ration : 0.125 acc : 0.9375  f1 : 0.6666666666666666
+[ 1 : 7900 / 22580.875 ] loss :0.6821  , accuracy:  0.625 true nums: 5  ration : 0.3125 acc : 0.625  f1 : 0.0
+[ 1 : 8000 / 22580.875 ] loss :0.5714  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 8100 / 22580.875 ] loss :0.6532  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 8200 / 22580.875 ] loss :0.5656  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 8300 / 22580.875 ] loss :0.5622  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 8400 / 22580.875 ] loss :0.5251  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 8500 / 22580.875 ] loss :0.4824  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 8600 / 22580.875 ] loss :0.6603  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 8700 / 22580.875 ] loss :0.4564  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 8800 / 22580.875 ] loss :0.5278  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 8900 / 22580.875 ] loss :0.5013  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 9000 / 22580.875 ] loss :0.6446  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 9100 / 22580.875 ] loss :0.5051  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 9200 / 22580.875 ] loss :0.5422  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 9300 / 22580.875 ] loss :0.6383  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 9400 / 22580.875 ] loss :0.4542  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 9500 / 22580.875 ] loss :0.4334  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 9600 / 22580.875 ] loss :0.4960  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 9700 / 22580.875 ] loss :0.3007  , accuracy:  1.0 true nums: 0  ration : 0.0 acc : 1.0  f1 : 0.0
+[ 1 : 9800 / 22580.875 ] loss :0.2786  , accuracy:  1.0 true nums: 0  ration : 0.0 acc : 1.0  f1 : 0.0
+[ 1 : 9900 / 22580.875 ] loss :0.5408  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 10000 / 22580.875 ] loss :0.7053  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 10100 / 22580.875 ] loss :0.5273  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 10200 / 22580.875 ] loss :0.6875  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 10300 / 22580.875 ] loss :0.4143  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 10400 / 22580.875 ] loss :0.5524  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 10500 / 22580.875 ] loss :0.6254  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 10600 / 22580.875 ] loss :0.6266  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 10700 / 22580.875 ] loss :0.5466  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 10800 / 22580.875 ] loss :0.4797  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 10900 / 22580.875 ] loss :0.5401  , accuracy:  0.75 true nums: 5  ration : 0.3125 acc : 0.75  f1 : 0.33333333333333337
+[ 1 : 11000 / 22580.875 ] loss :0.5168  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 11100 / 22580.875 ] loss :0.7260  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 11200 / 22580.875 ] loss :0.6605  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 11300 / 22580.875 ] loss :0.6389  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 11400 / 22580.875 ] loss :0.4427  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 11500 / 22580.875 ] loss :0.7160  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 11600 / 22580.875 ] loss :0.5427  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 11700 / 22580.875 ] loss :0.4708  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 11800 / 22580.875 ] loss :0.6050  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 11900 / 22580.875 ] loss :0.6126  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 12000 / 22580.875 ] loss :0.3846  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 12100 / 22580.875 ] loss :0.6174  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 12200 / 22580.875 ] loss :0.5346  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 12300 / 22580.875 ] loss :0.2065  , accuracy:  1.0 true nums: 0  ration : 0.0 acc : 1.0  f1 : 0.0
+[ 1 : 12400 / 22580.875 ] loss :0.5879  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 12500 / 22580.875 ] loss :0.6864  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 12600 / 22580.875 ] loss :0.4719  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 12700 / 22580.875 ] loss :0.7207  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 12800 / 22580.875 ] loss :0.4420  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 12900 / 22580.875 ] loss :0.7625  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 13000 / 22580.875 ] loss :0.7083  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 13100 / 22580.875 ] loss :0.8126  , accuracy:  0.5 true nums: 8  ration : 0.5 acc : 0.5  f1 : 0.0
+[ 1 : 13200 / 22580.875 ] loss :0.6954  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 13300 / 22580.875 ] loss :0.6489  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 13400 / 22580.875 ] loss :0.4222  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 13500 / 22580.875 ] loss :0.4175  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 13600 / 22580.875 ] loss :0.9781  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 13700 / 22580.875 ] loss :0.3871  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 13800 / 22580.875 ] loss :0.4107  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 13900 / 22580.875 ] loss :0.4857  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 14000 / 22580.875 ] loss :0.6089  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 14100 / 22580.875 ] loss :0.5135  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 14200 / 22580.875 ] loss :0.7202  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 14300 / 22580.875 ] loss :0.4594  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 14400 / 22580.875 ] loss :0.7120  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 14500 / 22580.875 ] loss :0.6211  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 14600 / 22580.875 ] loss :0.5533  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 14700 / 22580.875 ] loss :0.4958  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 14800 / 22580.875 ] loss :0.5269  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 14900 / 22580.875 ] loss :0.4864  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 15000 / 22580.875 ] loss :0.5722  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 15100 / 22580.875 ] loss :0.4186  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 15200 / 22580.875 ] loss :0.4927  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 15300 / 22580.875 ] loss :0.5999  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 15400 / 22580.875 ] loss :0.6420  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 15500 / 22580.875 ] loss :0.4002  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 15600 / 22580.875 ] loss :0.5893  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 15700 / 22580.875 ] loss :0.4068  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 15800 / 22580.875 ] loss :1.0497  , accuracy:  0.5 true nums: 8  ration : 0.5 acc : 0.5  f1 : 0.0
+[ 1 : 15900 / 22580.875 ] loss :0.3735  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 16000 / 22580.875 ] loss :0.4821  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 16100 / 22580.875 ] loss :0.8121  , accuracy:  0.5 true nums: 8  ration : 0.5 acc : 0.5  f1 : 0.0
+[ 1 : 16200 / 22580.875 ] loss :0.6107  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 16300 / 22580.875 ] loss :0.6165  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 16400 / 22580.875 ] loss :0.6306  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 16500 / 22580.875 ] loss :0.5725  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 16600 / 22580.875 ] loss :0.5025  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 16700 / 22580.875 ] loss :0.5919  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 16800 / 22580.875 ] loss :0.4826  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 16900 / 22580.875 ] loss :0.6073  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 17000 / 22580.875 ] loss :0.6844  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 17100 / 22580.875 ] loss :0.5123  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 17200 / 22580.875 ] loss :0.7123  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 17300 / 22580.875 ] loss :0.2956  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 17400 / 22580.875 ] loss :0.5075  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 17500 / 22580.875 ] loss :0.2987  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 17600 / 22580.875 ] loss :0.6140  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 17700 / 22580.875 ] loss :0.5888  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 17800 / 22580.875 ] loss :0.3595  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 17900 / 22580.875 ] loss :0.5015  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 18000 / 22580.875 ] loss :0.6526  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 18100 / 22580.875 ] loss :0.3380  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 18200 / 22580.875 ] loss :0.6784  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 18300 / 22580.875 ] loss :0.5594  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 18400 / 22580.875 ] loss :0.4775  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 18500 / 22580.875 ] loss :0.5874  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 18600 / 22580.875 ] loss :0.5856  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 18700 / 22580.875 ] loss :0.7981  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 18800 / 22580.875 ] loss :0.6802  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 18900 / 22580.875 ] loss :0.4845  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 19000 / 22580.875 ] loss :0.3125  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 19100 / 22580.875 ] loss :0.6708  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 19200 / 22580.875 ] loss :0.5588  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 19300 / 22580.875 ] loss :0.5764  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 19400 / 22580.875 ] loss :0.3744  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 19500 / 22580.875 ] loss :0.6101  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 19600 / 22580.875 ] loss :0.4040  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 19700 / 22580.875 ] loss :0.4120  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 19800 / 22580.875 ] loss :0.4869  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 19900 / 22580.875 ] loss :0.5780  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 20000 / 22580.875 ] loss :0.7784  , accuracy:  0.5 true nums: 8  ration : 0.5 acc : 0.5  f1 : 0.0
+[ 1 : 20100 / 22580.875 ] loss :0.4100  , accuracy:  0.9375 true nums: 1  ration : 0.0625 acc : 0.9375  f1 : 0.0
+[ 1 : 20200 / 22580.875 ] loss :0.6989  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 20300 / 22580.875 ] loss :0.5480  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 20400 / 22580.875 ] loss :0.4571  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 20500 / 22580.875 ] loss :0.6723  , accuracy:  0.625 true nums: 6  ration : 0.375 acc : 0.625  f1 : 0.0
+[ 1 : 20600 / 22580.875 ] loss :0.8134  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+[ 1 : 20700 / 22580.875 ] loss :0.4862  , accuracy:  0.8125 true nums: 3  ration : 0.1875 acc : 0.8125  f1 : 0.0
+[ 1 : 20800 / 22580.875 ] loss :0.6458  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 20900 / 22580.875 ] loss :0.5535  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 21000 / 22580.875 ] loss :0.6055  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 21100 / 22580.875 ] loss :0.5731  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 21200 / 22580.875 ] loss :0.2968  , accuracy:  1.0 true nums: 0  ration : 0.0 acc : 1.0  f1 : 0.0
+[ 1 : 21300 / 22580.875 ] loss :0.5786  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 21400 / 22580.875 ] loss :0.5994  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 21500 / 22580.875 ] loss :0.4808  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 21600 / 22580.875 ] loss :0.5251  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 21700 / 22580.875 ] loss :0.6309  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 21800 / 22580.875 ] loss :0.4333  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 21900 / 22580.875 ] loss :0.4804  , accuracy:  0.75 true nums: 4  ration : 0.25 acc : 0.75  f1 : 0.0
+[ 1 : 22000 / 22580.875 ] loss :0.4072  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 22100 / 22580.875 ] loss :0.4577  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 22200 / 22580.875 ] loss :0.6539  , accuracy:  0.6875 true nums: 5  ration : 0.3125 acc : 0.6875  f1 : 0.0
+[ 1 : 22300 / 22580.875 ] loss :0.8428  , accuracy:  0.4375 true nums: 9  ration : 0.5625 acc : 0.4375  f1 : 0.0
+[ 1 : 22400 / 22580.875 ] loss :0.5024  , accuracy:  0.875 true nums: 2  ration : 0.125 acc : 0.875  f1 : 0.0
+[ 1 : 22500 / 22580.875 ] loss :0.7244  , accuracy:  0.5625 true nums: 7  ration : 0.4375 acc : 0.5625  f1 : 0.0
+开始验证。。。
+/home/hdj/anaconda3/envs/waf/lib/python3.7/site-packages/transformers/optimization.py:155: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at  /pytorch/torch/csrc/utils/python_arg_parser.cpp:882.)
+  exp_avg.mul_(beta1).add_(1.0 - beta1, grad)
+/home/hdj/anaconda3/envs/waf/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1465: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no true nor predicted samples. Use `zero_division` parameter to control this behavior.
+  average, "true nor predicted", 'F-score is', len(true_sum)
+Epoch:   0%|          | 0/3 [1:14:54<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/hdj/CodeBERT-webshell/run_classifier_feature.py", line 579, in <module>
+    results = evaluate(args, model, val_loader, None, tokenizer, checkpoint=str(args.start_epoch + idx), mode='dev')
+  File "/home/hdj/CodeBERT-webshell/run_classifier_feature.py", line 358, in evaluate
+    pred = model(ids, mask)  # 输出是[batch_size,2]
+  File "/home/hdj/anaconda3/envs/waf/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+TypeError: forward() missing 1 required positional argument: 'feature'
