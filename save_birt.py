@@ -13,16 +13,22 @@ import gc
 # fold_number=12
 # project='tomcat'
 # fold_number=2
-# project='aspectj'
-# fold_number=1
+#project='aspectj'
+#fold_number=1
 # project='swt'
 # fold_number=8
+import sys
+project=sys.argv[1]
+fold_number=int(sys.argv[2])
+print(project,fold_number)
+
 # project='birt'
 # fold_number=8
+
 test_fold_03=[]
 #TODO change
-project='tomcat'
-fold_number=2
+#project='tomcat'
+#fold_number=2
 # project='swt'
 # fold_number=13
 
@@ -62,12 +68,31 @@ if tar:
     code_urls=np.load("/data/hdj/tracking_buggy_files/joblib_memmap_"+project+"/code_urls_tar1018.npy")
     nl_urls=np.load("/data/hdj/tracking_buggy_files/joblib_memmap_"+project+"/nl_urls_tar1018.npy")
 else:
-    nl_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_vecs_cross_"+str(top_k_method)+".npy")
+    # nl_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_vecs_"+str(top_k_method)+"_MIX.npy")
     # nl_vecs[0]
-    code_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_vecs_cross_"+str(top_k_method)+".npy")
+    # code_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_vecs_"+str(top_k_method)+"_MIX.npy")
 
-    code_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_urls_cross_"+str(top_k_method)+".npy")
-    nl_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_urls_cross_"+str(top_k_method)+".npy")
+    # code_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_urls_"+str(top_k_method)+"_MIX.npy")
+    # nl_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_urls_"+str(top_k_method)+"_MIX.npy")
+    # nl_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_vecs_"+str(top_k_method)+"_CSN.npy")
+    # # nl_vecs[0]
+    # code_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_vecs_"+str(top_k_method)+"_CSN.npy")
+
+    # code_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_urls_"+str(top_k_method)+"_CSN.npy")
+    # nl_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_urls_"+str(top_k_method)+"_CSN.npy")
+    nl_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_vecs.npy")
+    # nl_vecs[0]
+    code_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_vecs.npy")
+
+    code_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_urls.npy")
+    nl_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_urls.npy")
+
+    # nl_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_vecs_cross_"+str(top_k_method)+"_notar.npy")
+    # # nl_vecs[0]
+    # code_vecs = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_vecs_cross_"+str(top_k_method)+"_notar.npy")
+
+    # code_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/code_urls_cross_"+str(top_k_method)+"_notar.npy")
+    # nl_urls = np.load("/data/hdj/tracking_buggy_files/joblib_memmap_" + project + "/nl_urls_cross_"+str(top_k_method)+"_notar.npy")
 
 reportId2nlvec=dict()
 for reportId,nl_vec in zip(nl_urls,nl_vecs):
@@ -162,7 +187,7 @@ else:
         # all_dataframe.head()
         all_dataframe.to_pickle(
             '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_training_fold_' + str(
-                k) + '_cross220116')
+                k) + '_CSN')
 
     for k in range(fold_number + 1):
         training_fold_k = pd.read_pickle(
@@ -173,4 +198,50 @@ else:
         # all_dataframe.head()
         all_dataframe.to_pickle(
             '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_testing_fold_' + str(
-                k) + '_cross220116')
+                k) + '_CSN')
+
+    # for k in range(fold_number + 1):
+    #     training_fold_k = pd.read_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_training_fold_' + str(
+    #             k) + '_raw')
+    #     training_fold_k.index.names = ['bid', 'fid']
+    #     #     training_fold_k.head()
+    #     all_dataframe = training_fold_k.join(df, how='inner')
+    #     # all_dataframe.head()
+    #     all_dataframe.to_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_training_fold_' + str(
+    #             k) + '_MIX')
+
+    # for k in range(fold_number + 1):
+    #     training_fold_k = pd.read_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_testing_fold_' + str(k) + '_raw')
+    #     training_fold_k.index.names = ['bid', 'fid']
+    #     #     training_fold_k.head()
+    #     all_dataframe = training_fold_k.join(df, how='inner')
+    #     # all_dataframe.head()
+    #     all_dataframe.to_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_testing_fold_' + str(
+    #             k) + '_MIX')
+
+    # for k in range(fold_number + 1):
+    #     training_fold_k = pd.read_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_training_fold_' + str(
+    #             k) + '_raw')
+    #     training_fold_k.index.names = ['bid', 'fid']
+    #     #     training_fold_k.head()
+    #     all_dataframe = training_fold_k.join(df, how='inner')
+    #     # all_dataframe.head()
+    #     all_dataframe.to_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_training_fold_' + str(
+    #             k) + '_cross220116_notar')
+
+    # for k in range(fold_number + 1):
+    #     training_fold_k = pd.read_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_testing_fold_' + str(k) + '_raw')
+    #     training_fold_k.index.names = ['bid', 'fid']
+    #     #     training_fold_k.head()
+    #     all_dataframe = training_fold_k.join(df, how='inner')
+    #     # all_dataframe.head()
+    #     all_dataframe.to_pickle(
+    #         '/data/hdj/tracking_buggy_files/' + project + '/' + project + '_normalized_testing_fold_' + str(
+    #             k) + '_cross220116_notar')

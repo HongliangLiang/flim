@@ -1,2 +1,0 @@
-#! /bin/bash
-python3 test1.py && python3 test2.py &&  ./test3.py eclipse_platform_ui/eclipse_platform_ui && nohup python3 test4.py eclipse_platform_ui/eclipse_platform_ui  > log_220117_test_shell 2>&1 &

@@ -193,15 +193,7 @@ def extract_bug_report(data, bug_report_indexes):
 
     rows = [summary_row, description_row, report_row]
     matrix = sparse.vstack(rows)
-    '''
-    a1=coo_matrix([1,1,1,1])
-    b1=coo_matrix([2,2,2,2])
-    c1=coo_matrix([3,3,3,3])
-    按照行进行拼接，列数要相等 lookup等于指定了0行是summary 1行是description 2行是report
-    array([[1, 1, 1, 1],
-       [2, 2, 2, 2],
-       [3, 3, 3, 3]])
-    '''
+
     return (matrix, lookup)
 
 if __name__ == '__main__':

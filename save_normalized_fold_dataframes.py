@@ -44,16 +44,14 @@ feature_columns = [
 
 def main():
     bug_report_file_path = sys.argv[1]
-
     file_prefix = sys.argv[2]
-    #打开aspectj.json文件 开始处理数据
+
     with open(bug_report_file_path) as bug_report_file:
         bug_reports = json.load(bug_report_file)
         process(bug_reports, file_prefix)
 
 
 def process(bug_reports, file_prefix):
-    #返回的是 (dd88d21,1386200000) commit timestamp
     sorted_commits = sort_bug_reports_by_db_id(bug_reports)
     # print(sorted_commits[0:5])
     #
@@ -77,30 +75,25 @@ def process(bug_reports, file_prefix):
         df = pd.DataFrame(features.todense(), index=filenames)
         df.columns = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15',
                       'f16', 'f17', 'f18', 'f19', 'used_in_fix']
-        #检查是否有正例出现
+
         relevant = df[(df['used_in_fix'] == 1)]
-        #按照f2的特征选200个最不相关的文件
         irrelevant = df[(df['used_in_fix'] == 0)].nlargest(number_of_irrelevant_files, 'f2')
-        #如果存在正例的话，就当做有效数据保存起来
+
         if relevant.shape[0] > 0:
-            #[0-499]/500都是fold=0 [500-999]是fold=1
             current_fold = fold_index // fold_size
             fold_index += 1
-            #训练数据是正例和采样出来的负例
-            #pos+200neg 所以大小都在200多一点
+
             training = pd.concat([relevant, irrelevant])
-            #每一折数据保存起来
+
             fold_training_data[current_fold].append(training)
             fold_training_keys[current_fold].append(commit)
-            #测试数据是全部负例都保存起来，把commit也保存起来
+
             fold_testing_data[current_fold].append(df)
             fold_testing_keys[current_fold].append(commit)
 
     fold_training = {}
     for fold_key, training_dataframes in fold_training_data.items():
         training_keys = fold_training_keys[fold_key]
-        #这里是把一个fold里所有训练数据拼接起来 fold_training_data={fold0:[train1,train2,train3]}
-        # fold_training_keys={fold0:[commit1,commit2]}
         training_dataframe = pd.concat(training_dataframes, keys=training_keys)
         fold_training[fold_key] = training_dataframe
 

@@ -161,19 +161,11 @@ def extract_types(ast):
     return types
 
 def vectorize(ast_cache, bug_reports, data_prefix):
-    '''
-
-    :param ast_cache: 解析文件的ast得到类的一些信息
-    :param bug_reports: report的相关信息
-    :param data_prefix:tomcat/tomcat
-    :return:
-    '''
     data = []
     current_index = 0
     
     ast_index_lookup = {}
     ast_types_lookup = {}
-    #遍历ast信息，做向量化处理
     with ast_cache.cursor() as cursor:
         for k, v in cursor:
             ast_sha = k
@@ -205,36 +197,17 @@ def vectorize(ast_cache, bug_reports, data_prefix):
     total_v = after_v - before_v
     print("total count vectorization time ", total_v)
     print("vectorized_data type ", type(vectorized_data))
-    print("vectorized_data shape", vectorized_data.shape)#3*4 3表示一共有多少条数据 4代表feature_names_的个数
-    '''
-    data = [ {'city':'Dubai','temperature':33.},
-    {'city':'London','temperature':12.},
-    {'city':'San Fransisco','temperature':18.},]
-    
-    vectorize_data：
-      (0, 0)	1.0
-      (0, 3)	33.0
-      (1, 1)	1.0
-      (1, 3)	12.0
-      (2, 2)	1.0
-      (2, 3)	18.0
-      
-      feature_names_：
-    ['city=Dubai', 'city=London', 'city=San Fransisco', 'temperature']
-    '''
+    print("vectorized_data shape", vectorized_data.shape)
 
-    #保存所有特征名的长度
+
     feature_names = vectorizer.get_feature_names()
     feature_names_lenghts_dict = {}
     for i, feature_name in enumerate(feature_names):
         feature_names_lenghts_dict[i] = len(feature_name)
     with open(data_prefix+'_feature_names_dict', 'w') as outfile:
         json.dump(feature_names_lenghts_dict, outfile)
-    #保存特征名长度
 
-    #保存词频统计的稀疏矩阵
     sparse.save_npz(data_prefix+'_raw_count_data', vectorized_data)
-    #保存完毕
 
     ast_index_collection = UnQLite(data_prefix+"_ast_index_collection_index_db")
     for k, v in ast_index_lookup.items():

@@ -38,8 +38,12 @@ def load_data_folds(file_prefix):
     fold_training = {}
     fold_testing = {}
     for k in range(fold_number + 1):
-        fold_training[k] = pd.read_pickle(file_prefix + '_normalized_training_fold_' + str(k)+'_cross220116')
-        fold_testing[k] = pd.read_pickle(file_prefix + '_normalized_testing_fold_' + str(k)+'_cross220116')
+        fold_training[k] = pd.read_pickle(file_prefix + '_normalized_training_fold_' + str(k)+'_CSN')
+        fold_testing[k] = pd.read_pickle(file_prefix + '_normalized_testing_fold_' + str(k)+'_CSN')
+        # fold_training[k] = pd.read_pickle(file_prefix + '_normalized_training_fold_' + str(k)+'_MIX')
+        # fold_testing[k] = pd.read_pickle(file_prefix + '_normalized_testing_fold_' + str(k)+'_MIX')
+        # fold_training[k] = pd.read_pickle(file_prefix + '_normalized_training_fold_' + str(k)+'_cross220116_notar')
+        # fold_testing[k] = pd.read_pickle(file_prefix + '_normalized_testing_fold_' + str(k)+'_cross220116_notar')
         # fold_training[k] = pd.read_pickle(file_prefix + '_normalized_training_fold_' + str(k)+'_adddata1016')
         # fold_training[k] = pd.read_pickle(file_prefix + '_normalized_training_fold_' + str(k)+'_mix1018')
         # fold_testing[k] = pd.read_pickle(file_prefix + '_normalized_testing_fold_' + str(k)+'_mix1018')

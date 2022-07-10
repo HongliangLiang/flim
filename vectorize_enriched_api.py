@@ -28,9 +28,8 @@ def main():
     print("bug report file path", bug_report_file_path)
     data_prefix = sys.argv[2]
     print("data prefix", data_prefix)
-    #返回的是所有report的shas，按时间顺序排好的
+
     fixes_list = extract_fixes_list(bug_report_file_path)
-    #接下来为每一个report都生成相应的api特征
     vectorize_enriched_api(fixes_list, data_prefix)
 
     after = default_timer()
@@ -97,14 +96,6 @@ def get_indexes(asts, shas):
     return indexes
 
 def add_types_source_to_bug_report_data(data, data_prefix, class_name_lookup, ast_sha):
-    '''
-
-    :param data: 是dictVector生成的稀疏矩阵2768871表示一共有多少条数据 32066代表feature_names_的个数
-    :param data_prefix:tomcat/tomcat
-    :param class_name_lookup:class_name 到shas的映射
-    :param ast_sha:report的父版本所有文件的对应shas
-    :return:
-    '''
     asts = UnQLite(data_prefix+"_ast_index_collection_index_db", flags = 0x00000100 | 0x00000001)
     types = UnQLite(data_prefix+"_ast_types_collection_index_db", flags = 0x00000100 | 0x00000001)
 
@@ -163,12 +154,7 @@ def add_types_source_to_bug_report_data(data, data_prefix, class_name_lookup, as
     return (enriched_apis_matrix, lookup, ast_sha)
 
 def vectorize_enriched_api(bug_report_fixing_commits, data_prefix):
-    '''
-
-    :param bug_report_fixing_commits: 每一个report的shas
-    :param data_prefix: tomcat/tomcat
-    :return:
-    '''
+    
     work = []
     for fixing_commit in bug_report_fixing_commits:
         work.append((data_prefix, fixing_commit))
@@ -181,31 +167,22 @@ def _f(args):
     return extract_enriched_api(args[0], args[1])
 
 def extract_enriched_api(data_prefix, bug_report_full_sha):
-    '''
-
-    :param data_prefix: tomcat/tomcat
-    :param bug_report_full_sha: 每一个report的shas
-    :return:
-    '''
     data = sparse.load_npz(data_prefix+'_raw_count_data.npz')
     bug_report_files_collection_db = UnQLite(data_prefix+"_bug_report_files_collection_db", flags = 0x00000100 | 0x00000001)
 
-    #根据report的sha取得其父版本所有的shas class_name_to_sha  sha_to_file_name
     current_files = pickle.loads(bug_report_files_collection_db[bug_report_full_sha])
     bug_report_files_collection_db.close() 
 
     bug_report_id = bug_report_full_sha[0:7]
 
-    #表示该report对应的父版本的所有文件shas
     shas = current_files['shas']
-    #文件名与shas的对应
     class_name_lookup = current_files['class_name_to_sha']
 
     bug_report_data = []
     bug_report_lookup = {}
 
     n_rows = 0
-    #遍历父版本的每一个文件
+
     for ast_sha in shas:
         ast_data, lookup, current_ast_sha = add_types_source_to_bug_report_data(data, data_prefix, class_name_lookup, ast_sha)
         current_index = n_rows

@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import sys
+
 def calculate_metrics(verification_df, k_range=range(1, 21)):
     average_precision_per_bug_report = []
     reciprocal_ranks = []
@@ -76,20 +78,27 @@ def calculate_metrics(verification_df, k_range=range(1, 21)):
 
 # project='tomcat'
 # swt_all_results_df_after=pd.read_pickle('/data/hdj/tracking_buggy_files/joblib_memmap_'+project+'/all_results_df_after_1017.pickle')
-project=sys.args[1]
-fold_number=int(sys.args[2])
-mod=sys.args[3]
-swt_all_results_df_after=pd.read_pickle('/data/hdj/tracking_buggy_files/featureMerge/all_results_df_after_1017_'+mod+'_'+project+'.pickle')
-train_fold_03=[]
+
+
 # fold_number=8
-# project='eclipse_platform_ui'
-# fold_number=12
-# project='birt'
-# fold_number=8
+#project='eclipse_platform_ui'
+#fold_number=12
+#project='birt'
+#fold_number=8
 # project='aspectj'
 # fold_number=1
 # project='tomcat'
 # fold_number=2
+project=sys.argv[1]
+fold_number=int(sys.argv[2])
+mod=sys.argv[3]
+# swt_all_results_df_after=pd.read_pickle('/data/hdj/tracking_buggy_files/featureMerge/all_results_df_after_1017_notar'+mod+'_'+project+'.pickle')
+swt_all_results_df_after=pd.read_pickle('/data/hdj/tracking_buggy_files/featureMerge/all_results_df_after_1017_'+mod+'_'+project+'_both.pickle')
+# swt_all_results_df_after=pd.read_pickle('/data/hdj/tracking_buggy_files/featureMerge/all_results_df_after_1017_'+mod+'_'+project+'_max.pickle')
+# swt_all_results_df_after=pd.read_pickle('/data/hdj/tracking_buggy_files/featureMerge/all_results_df_after_1017_'+mod+'_'+project+'_mean.pickle')
+
+
+train_fold_03=[]
 # project='jdt'
 # fold_number=12
 # project='swt'
@@ -108,7 +117,7 @@ train_all_data.shape,len(bidList),len(fidList)
 
 all_data_len=len(bidList)
 train_len=int(all_data_len*0.2)
-val_len=train_len+int(all_data_len*0.2)
+val_len=train_len#+int(all_data_len*0.2)
 # filterList=list(bidList)[:train_len]
 filterList=list(bidList)[:val_len]
 len(filterList),len(set(filterList))

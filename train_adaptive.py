@@ -32,25 +32,25 @@ from metrics import calculate_metric_results
 from train_utils import eprint
 
 feature_columns = [
-    "f1",
-    "f2",
-    "f3",
+     "f1",
+     "f2",
+     "f3",
     "f4",
-    "f5",
-    "f6",
-    "f7",
-    "f8",
-    "f9",
-    "f10",
-    "f11",
-    "f12",
-    "f13",
-    "f14",
-    "f15",
-    "f16",
-    "f17",
-    "f18",
-    "f19",
+     "f5",
+     "f6",
+     "f7",
+     "f8",
+     "f9",
+     "f10",
+     "f11",
+     "f12",
+     "f13",
+     "f14",
+     "f15",
+     "f16",
+     "f17",
+     "f18",
+     "f19",
 
     # "f20",
     # "f21",
@@ -67,16 +67,16 @@ feature_columns = [
     # "f32",
     # "f33",
     # "f34",
-    # "f35",
-    # "f36",
-    "f37",
-    "f38"
+   # "f35",
+   # "f36",
+   # "f37",
+   # "f38"
 ]
 
 
 def main():
     file_prefix = sys.argv[1]
-
+    project=sys.argv[2]
     cwd = os.getcwd()
     folder = cwd+'/joblib_memmap_' + file_prefix
     #/data/hdj/tracking_buggy_files/joblib_memmap_tomcat/tomcat
@@ -89,7 +89,7 @@ def main():
     results = []
     for m in models:
         #训练模型然后保存结果
-        results.append(process(m, fold_number, fold_testing, fold_training, file_prefix))
+        results.append(process(m, fold_number, fold_testing, fold_training, file_prefix,project))
 
     results = [r for r in results if r is not None]
     eprint('Results')
@@ -102,7 +102,7 @@ def _process(ptemplate, fold_training, fold_testing):
     return result
 
 
-def process(ptemplate, fold_number, fold_testing, fold_training, file_prefix):
+def process(ptemplate, fold_number, fold_testing, fold_training, file_prefix,project):
     '''
 
     :param ptemplate: 指模型
@@ -143,11 +143,11 @@ def process(ptemplate, fold_number, fold_testing, fold_training, file_prefix):
     best_regression_log = ptemplate.best_regression_log.copy()
 
     all_results_df = pd.concat(results_list)
-    with open('/data/hdj/tracking_buggy_files/joblib_memmap_tomcat/all_results_df_before_1017.pickle', 'wb') as file:
+    with open('/data/hdj/tracking_buggy_files/joblib_memmap_swt/all_results_df_after.pickle', 'wb') as file:
         pickle.dump(all_results_df, file, protocol=pickle.HIGHEST_PROTOCOL)
     #这里第二维fid索引给丢弃了，我得保留，找到文件对应的信息
     all_results_df.reset_index(level=1, drop=True, inplace=True)
-    with open('/data/hdj/tracking_buggy_files/joblib_memmap_tomcat/all_results_df_after_1017.pickle', 'wb') as file:
+    with open('/data/hdj/tracking_buggy_files/featureMerge/all_results_df_after_1017_MAXMEAN_'+project+'.pickle', 'wb') as file:
         pickle.dump(all_results_df, file, protocol=pickle.HIGHEST_PROTOCOL)
     eprint(training_time_list)
     #打印一些统计信息

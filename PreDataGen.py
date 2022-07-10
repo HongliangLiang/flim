@@ -1,51 +1,4 @@
 #获取bug_report TODO
-
-import re
-import pandas as pd
-import nltk
-import string
-import glob
-import string
-import inflection
-import json
-import subprocess
-from unqlite import UnQLite
-import pickle
-from scipy import sparse
-import numpy as np
-from nltk.corpus import stopwords
-from collections import Counter
-from nltk import wordpunct_tokenize
-from nltk.stem.porter import PorterStemmer
-from re import finditer
-import torch
-from tqdm import tqdm, trange
-import torch.nn as nn
-from transformers import RobertaTokenizer, RobertaConfig, RobertaModel, AdamW
-import transformers
-import torch.nn.functional as F
-from torch.nn import CrossEntropyLoss
-from torch.utils.data import Dataset
-from torch.utils.data import DataLoader
-import numpy as np
-import random
-from sklearn import metrics
-import torch.nn as nn
-import argparse
-import torch.distributed as dist
-import torch.utils.data.distributed
-import os
-from collections import defaultdict
-from sklearn.metrics import f1_score
-# from utils import (compute_metrics, convert_examples_to_features,
-#                        output_modes, processors)
-from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler,
-                              TensorDataset)
-from transformers import (WEIGHTS_NAME, get_linear_schedule_with_warmup, AdamW,
-                          RobertaConfig,
-                          RobertaForSequenceClassification,
-                          RobertaTokenizer)
-from collections import defaultdict
 import json
 def load_bug_reports(bug_report_file_path):
     """load bug report file (the one generated from xml)"""
@@ -55,8 +8,6 @@ def load_bug_reports(bug_report_file_path):
 # bug_report_file_path='/data/hdj/tracking_buggy_files/'+swt+'.json'
 # bug_report_file_path='/data/hdj/tracking_buggy_files/eclipse_platform_ui/eclipse_platform_ui.json'
 # bug_report_file_path='/data/hdj/tracking_buggy_files/aspectj/aspectj.json'
-project = "tomcat"
-fold_number=2
 bug_report_file_path='/data/hdj/tracking_buggy_files/'+project+'/'+project+'.json'
 bug_reports = load_bug_reports(bug_report_file_path)
 #这个是原始的report ，我还可以获取经过分词的report
@@ -66,18 +17,6 @@ bug_reports = load_bug_reports(bug_report_file_path)
 
 ast_cache_collection_db=UnQLite("/data/hdj/tracking_buggy_files/"+project+"/"+project+"_ast_cache_collection_db",
                                              flags=0x00000100 | 0x00000001)
-test_fold_03=[]
-# training_fold_10.head()
-for k in range(fold_number+1):
-    test_fold_k= pd.read_pickle('/data/hdj/tracking_buggy_files/'+project+'/'+project+'_normalized_testing_fold_'+str(k)+'_raw')
-    test_fold_03.append(test_fold_k)
-    print(test_fold_k.shape)
-test_fold_all=pd.concat(test_fold_03)
-print(test_fold_all.shape)
-test_fold_all.head()
-report_idx=test_fold_all.index.get_level_values(0).unique()
-code_idx=test_fold_all.index.get_level_values(1).unique()
-print(len(report_idx),len(code_idx))
 
 bid_list=list(report_idx)
 print(len(bid_list))
@@ -106,7 +45,7 @@ def clean_string_report(string):
     outtmp=[token for token in outtmp if token.isalnum() ]
     return ' '.join(outtmp)
 # 生成report.jsonl
-with open('/data/hdj/tracking_buggy_files/joblib_memmap_'+project+'/report_'+project+'.jsonl','w',encoding='utf-8') as f_out:
+with open('/data/hdj/tracking_buggy_files/joblib_memmap_'+project+'/report.jsonl','w',encoding='utf-8') as f_out:
        for row in report_dataFrame.iterrows():
 #             print(row)
             task1=dict()
@@ -233,7 +172,7 @@ all_ast_index_dataframe=pd.DataFrame({'all_ast_file_methods':all_ast_file_method
 # all_ast_index_dataframe = pd.DataFrame({'all_ast_file_methods':all_ast_file_methods, 'source':all_ast_file_source,'names':all_ast_file_names},index=all_ast_index)
 
 # 生成code.jsonl
-with open('/data/hdj/tracking_buggy_files/joblib_memmap_'+project+'/code_'+project+'.jsonl','w',encoding='utf-8') as f_out:
+with open('/data/hdj/tracking_buggy_files/joblib_memmap_'+project+'/code.jsonl','w',encoding='utf-8') as f_out:
        for row in all_ast_index_dataframe.iterrows():
 #             print(row)
             all_methods=row[1].all_ast_file_methods
